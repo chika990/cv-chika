@@ -1,0 +1,107 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: #b3d9ff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+/* --- Navigasi --- */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* agar menu di tengah layar */
+  background: transparent;
+}
+
+.nav-links {
+  background: #e3f2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 15px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  list-style: none;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0b5394;
+  text-decoration: underline;
+}
+
+/* Judul */
+h1 {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* Kartu kontak */
+.contact-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px 25px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+}
+
+.whatsapp-icon {
+  color: #25D366; /* warna hijau khas WhatsApp */
+  font-size: 1.3em;
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover .whatsapp-icon {
+  transform: scale(1.2);
+}
+
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card h5 {
+  font-weight: 600;
+  color: #004080;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.contact-card a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,265 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #b3d9ff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+/* --- Navigasi --- */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* agar menu di tengah layar */
+  background: transparent;
+}
+
+.nav-links {
+  background: #e3f2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 15px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  list-style: none;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0b5394;
+  text-decoration: underline;
+}
+
+
+/* CV Container */
+.cv-container {
+  position: relative;
+  background: #fff;
+  max-width: 900px;
+  margin-bottom: 50px;
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  padding: 40px;
+  animation: fadeIn 0.8s ease-in-out;
+  overflow: hidden;
+}
+
+/* Header CV */
+.cv-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Foto Profil di kanan atas */
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+/* Info Teks */
+.cv-info {
+  max-width: 60%;
+}
+
+.cv-info h1 {
+  font-size: 2em;
+  color: #1e3a8a;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.cv-info h2 {
+  font-size: 1.5em;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.cv-info p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Tombol */
+.cv-button {
+  display: inline-block;
+  background: #1e3a8a;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.cv-button:hover {
+  background: #0b5394;
+}
+
+.btn {
+  color: #1e3a8a;
+  background-color: #81b4e4c4;
+}
+
+.btn:hover {
+background-color:rgba(66, 231, 231, 0.66);
+transform: scale(0.90);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 RESPONSIVE UNTUK HP */
+@media (max-width: 768px) {
+  body {
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  nav {
+    padding: 10px 20px;
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .cv-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .cv-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 15px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .cv-info {
+    max-width: 100%;
+  }
+
+  .cv-info h1 {
+    font-size: 1.6em;
+  }
+
+  .cv-info h2 {
+    font-size: 1.2em;
+  }
+
+  .cv-info p {
+    font-size: 0.95em;
+  }
+
+  .cv-button {
+    padding: 8px 16px;
+    font-size: 0.95em;
+  }
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.info-icon {
+  font-size: 1.6em;
+  color: #E1306C; /* warna khas Instagram */
+}
+
+.info-title {
+  font-weight: 600;
+  color: #1e3a8a;
+  min-width: 90px;
+}
+
+.info-text a {
+  color: #E1306C;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.info-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* Tambahan opsional: layar sangat kecil */
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction:row;
+    gap: 5px;
+  }
+
+  .ul {
+    margin: 20px;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cv-container {
+    padding: 15px;
+  }
+
+  .cv-info h1 {
+    font-size: 1.4em;
+  }
+
+  .cv-info h2 {
+    font-size: 1.1em;
+  }
+}
