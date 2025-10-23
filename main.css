@@ -20,7 +20,7 @@ body {
 nav {
   width: 100%;
   display: flex;
-  justify-content: center; /* agar menu di tengah layar */
+  justify-content: center;
   background: transparent;
 }
 
@@ -32,8 +32,9 @@ nav {
   gap: 40px;
   padding: 15px 40px;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(49, 171, 205, 0.849);
   list-style: none;
+  margin: 0px;
 }
 
 .nav-links li {
@@ -43,12 +44,9 @@ nav {
 .nav-links a {
   text-decoration: none;
   color: #1e3a8a;
-  font-weight: 500;
   font-size: 1.1em;
-  transition: 0.3s;
 }
 
-.nav-links a:hover,
 .nav-links a.active {
   color: #0b5394;
   text-decoration: underline;
@@ -63,10 +61,11 @@ nav {
   margin-bottom: 50px;
   width: 90%;
   border-radius: 15px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   padding: 40px;
   animation: fadeIn 0.8s ease-in-out;
   overflow: hidden;
+  font-size: 15px;
 }
 
 /* Header CV */
@@ -82,11 +81,9 @@ nav {
 .profile-photo {
   width: 160px;
   height: 160px;
-  border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   position: absolute;
-  top: 30px;
+  top: 50px;
   right: 40px;
 }
 
@@ -114,6 +111,10 @@ nav {
   margin-bottom: 10px;
 }
 
+.lead {
+  font-size: 20px;
+}
+
 /* Tombol */
 .cv-button {
   display: inline-block;
@@ -136,14 +137,21 @@ nav {
 }
 
 .btn:hover {
-background-color:rgba(66, 231, 231, 0.66);
-transform: scale(0.90);
+  background-color: rgba(66, 231, 231, 0.66);
+  transform: scale(0.90);
 }
 
 /* Animasi */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 📱 RESPONSIVE UNTUK HP */
@@ -154,13 +162,9 @@ transform: scale(0.90);
   }
 
   nav {
-    padding: 10px 20px;
-    width: 90%;
-    font-size: 15px;
-  }
-
-  .nav-links {
-    gap: 25px;
+    padding-top: 20px;
+    width: 100%;
+    font-size: 16px;
   }
 
   .cv-container {
@@ -183,16 +187,8 @@ transform: scale(0.90);
     height: 120px;
   }
 
-  .cv-info {
-    max-width: 100%;
-  }
-
   .cv-info h1 {
     font-size: 1.6em;
-  }
-
-  .cv-info h2 {
-    font-size: 1.2em;
   }
 
   .cv-info p {
@@ -205,40 +201,11 @@ transform: scale(0.90);
   }
 }
 
-.info-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.info-icon {
-  font-size: 1.6em;
-  color: #E1306C; /* warna khas Instagram */
-}
-
-.info-title {
-  font-weight: 600;
-  color: #1e3a8a;
-  min-width: 90px;
-}
-
-.info-text a {
-  color: #E1306C;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.info-text a:hover {
-  text-decoration: underline;
-}
-
 
 /* Tambahan opsional: layar sangat kecil */
 @media (max-width: 480px) {
   .nav-links {
-    flex-direction:row;
+    flex-direction: row;
     gap: 5px;
   }
 
